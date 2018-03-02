@@ -19,5 +19,29 @@
 			"needs": "when( .+) enters the battlefield",
 			"does": null
 		}
-	}
+	},
+	{
+		"name": "deals_damage_player",
+		"reg": {
+    			"does": "deal[s]? ([0-9x]) damage.*player",
+			"needs": null
+		},
+		"description": "Deals any amount of damage to a player"
+	},
+	{
+		"name": "deals_damage_creature",
+		"reg": {
+    			"does": "deal[s]? ([0-9x]) damage.*creature",
+			"needs": null
+		},
+		"description": "Deals any amount of damage to a creature"
+	},
+	{
+		"name": "deals_damage_target",
+		"reg": {
+    			"does": "deal[s]? ([0-9x]) damage.*target ((player)|(creature)){0,1}( or ){0,1}((player)|(creature)){1,2}\.",
+			"needs": null
+		},
+		"description": "Deals any amount of damage to any target"
+	},
 ]
